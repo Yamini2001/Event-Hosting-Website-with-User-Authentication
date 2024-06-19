@@ -1,0 +1,78 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    height: 80px;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.middle {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.title, .subtext, .platform, .price, .company, .login {
+    margin-right: 10px;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.dropdown-button:focus {
+    outline: none;
+}
+
+.book-demo-button {
+    background-color: #f39c12;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.book-demo-button:hover {
+    background-color: #e67e22;
+}
+
+.login {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.arrow svg {
+    vertical-align: middle;
+}

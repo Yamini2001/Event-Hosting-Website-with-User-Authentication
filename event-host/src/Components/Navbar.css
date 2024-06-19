@@ -76,3 +76,10 @@
 .arrow svg {
     vertical-align: middle;
 }
+
+.navbar-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light white border */
+    margin: 0;
+    padding: 0;
+}

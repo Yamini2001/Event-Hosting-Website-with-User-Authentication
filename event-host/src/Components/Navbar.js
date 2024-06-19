@@ -1,46 +1,63 @@
-import React from 'react';
-import { FaCaretDown } from 'react-icons/fa'; // Import the dropdown icon
-import './Navbar.css'; // Import your CSS file for styling
+import React from "react";
+import { Link } from "react-router-dom";
+import { FaCaretDown } from "react-icons/fa";
+import { useAuth } from "../context/AuthContext";
+import "./Navbar.css";
 
-const Header = () => {
-    const handleDropdownClick = () => {
-        // Handle the dropdown click event
-        console.log('Dropdown icon clicked');
-    };
+const Navbar = () => {
+  const { user, logout } = useAuth();
 
-    return (
-        <div className="header">
-            <div className="left">
-                <div className="logo">EventHost</div>
-            </div>
-            <div className="middle">
-                <div className="title">Solution</div>
-                <button className="dropdown-button" onClick={handleDropdownClick}>
-                    <FaCaretDown />
-                </button>
-                <div className="subtext">Resources</div>
-                <button className="dropdown-button" onClick={handleDropdownClick}>
-                    <FaCaretDown />
-                </button>
-                <div className="platform">Platform</div>
-                <button className="dropdown-button" onClick={handleDropdownClick}>
-                    <FaCaretDown />
-                </button>
-                <div className="price">Pricing</div>
-                <button className="dropdown-button" onClick={handleDropdownClick}>
-                    <FaCaretDown />
-                </button>
-                <div className="company">Company</div>
-                <button className="dropdown-button" onClick={handleDropdownClick}>
-                    <FaCaretDown />
-                </button>
-            </div>
-            <div className="right">
-                <div className="login">Login</div>
-                <button className="book-demo-button">Book Demo</button>
-            </div>
+  const handleDropdownClick = () => {
+    console.log("Dropdown icon clicked");
+  };
+
+  return (
+    <>
+      <div className="header">
+        <div className="left">
+          <div className="logo">EventHost</div>
         </div>
-    );
-}
+        <div className="middle">
+          <div className="title">Solution</div>
+          <button className="dropdown-button" onClick={handleDropdownClick}>
+            <FaCaretDown />
+          </button>
+          <div className="subtext">Resources</div>
+          <button className="dropdown-button" onClick={handleDropdownClick}>
+            <FaCaretDown />
+          </button>
+          <div className="platform">Platform</div>
+          <button className="dropdown-button" onClick={handleDropdownClick}>
+            <FaCaretDown />
+          </button>
+          <div className="price">Pricing</div>
+          <button className="dropdown-button" onClick={handleDropdownClick}>
+            <FaCaretDown />
+          </button>
+          <div className="company">Company</div>
+          <button className="dropdown-button" onClick={handleDropdownClick}>
+            <FaCaretDown />
+          </button>
+        </div>
+        <div className="right">
+          {user ? (
+            <>
+              <div className="username">{user.username}</div>
+              <button className="logout-button" onClick={logout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link to="/login" className="login">
+              Login
+            </Link>
+          )}
+          <button className="book-demo-button">Book Demo</button>
+        </div>
+      </div>
+      <hr className="navbar-divider" />
+    </>
+  );
+};
 
-export default Header;
+export default Navbar;

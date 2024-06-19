@@ -1,23 +1,29 @@
 import React from "react";
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-// import Home from "./pages/Home";
-// import News from "./pages/News";
+import Login from "./Components/Login";
+import Dashboard from "./Components/Dashboard";
+import AuthProvider from "./context/AuthContext";
+import PrivateRoute from "./router/PrivateRoute";
+import Navbar from "./Components/Navbar"; // Assuming you have a Navbar component
+import "./App.css"; // Assuming you have global styles in App.css
 
-const App = () => {
- return (
-   <Router>
-     <Navbar />
-     <main className="main-content">
-       <Routes>
-         {/* <Route path="/" element={<Home />} /> */}
-         {/* <Route path="/news" element={<News />} /> */}
-         {/* Define other routes that you need*/}
-       </Routes>
-     </main>
-   </Router>
- );
-};
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <AuthProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route element={<PrivateRoute />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
+            {/* Other routes */}
+          </Routes>
+        </AuthProvider>
+      </Router>
+    </div>
+  );
+}
 
 export default App;

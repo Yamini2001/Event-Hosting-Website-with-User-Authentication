@@ -1,0 +1,54 @@
+.virtual-event-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the start of the container */
+  padding: 20px; /* Add padding to the container */
+  border: 1px solid white; 
+  border-radius: 15px;
+  background-color: black; /* Background color for the container */
+  max-width: 1200px; /* Maximum width for the container */
+  margin: auto; /* Center the container */
+  margin-top: -20px;
+  z-index: -1;
+}
+.text{
+  font-size: 23px;
+}
+
+.event-text {
+  flex: 1; /* Allow the text part to take up the remaining space */
+  padding-right: 20px; /* Adjust spacing as needed */
+  color: white; /* Ensure the text color is white */
+}
+
+.event-image {
+  flex: 0 0 auto; /* Prevent the image from stretching */
+  max-width: 320px; /* Adjust the max-width for the image */
+  height:400px;
+}
+
+.event-image img {
+  width: 100%; /* Ensure the image fits within the container */
+  height: 380px;
+  border-radius: 15px; 
+  background-color: none;
+  opacity: 1;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  color: white; /* Ensure the text color is white */
+}
+
+.circle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+  background-color: #43EFC6; /* Circle background color */
+  border-radius: 50%; /* Make it a circle */
+  color: white; /* Icon color */
+  margin-left: 5px; /* Adjust the spacing as needed */
+}

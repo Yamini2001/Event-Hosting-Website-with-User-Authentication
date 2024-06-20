@@ -1,28 +1,42 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./Home.css"; // Import the CSS file for styling
 import { FaGithub } from 'react-icons/fa'; // Import the GitHub icon
 import { SiAdobe, SiGoogle, SiAmazon, SiCocacola, SiUnilever, SiMicrosoft, SiSlack } from 'react-icons/si';
-
 
 import image1 from "../Components/images/image1.jpg";
 import image2 from "../Components/images/image2.png";
 import image3 from "../Components/images/image3.png";
 import image4 from "../Components/images/image4.jpg";
 
+import Webinar from "./Webinar";
+import VirtualEvent from "./VirtualEvent";
+import HybridEvent from "./HybridEvent";
+import InPersonEvent from "./InPersonEvent";
+import PowerfulFeatures from "./PowerfulFeatures"; 
+
 const Home = () => {
-    const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedEvent, setSelectedEvent] = useState('Virtual Event'); // Default to 'Virtual Event'
 
   // Function to handle button click and set selected event
   const handleEventClick = (event) => {
     setSelectedEvent(event);
   };
 
-  const eventTexts = {
-    Webinar: "Text for Webinar event goes here.",
-    'Virtual Event': "Text for Virtual Event goes here.",
-    'Hybrid Event': "Text for Hybrid Event goes here.",
-    'InPerson Event': "Text for InPerson Event goes here."
+  const renderEventContent = () => {
+    switch (selectedEvent) {
+      case 'Webinar':
+        return <Webinar />;
+      case 'Virtual Event':
+        return <VirtualEvent />;
+      case 'Hybrid Event':
+        return <HybridEvent />;
+      case 'InPerson Event':
+        return <InPersonEvent />;
+      default:
+        return null;
+    }
   };
+
   return (
     <div className="home-container">
       <h1>
@@ -78,18 +92,24 @@ const Home = () => {
         </div>
       </div>
       <h2 className="use-case-heading">Customized to Your Use Case</h2>
-      <div className="button-box">
-        <button className={`event-button ${selectedEvent === 'Webinar' ? 'active' : ''}`} onClick={() => handleEventClick('Webinar')}>Webinar</button>
-        <button className={`event-button ${selectedEvent === 'Virtual Event' ? 'active' : ''}`} onClick={() => handleEventClick('Virtual Event')}>Virtual Event</button>
-        <button className={`event-button ${selectedEvent === 'Hybrid Event' ? 'active' : ''}`} onClick={() => handleEventClick('Hybrid Event')}>Hybrid Event</button>
-        <button className={`event-button ${selectedEvent === 'InPerson Event' ? 'active' : ''}`} onClick={() => handleEventClick('InPerson Event')}>InPerson Event</button>
+      <div className="outer-button-box">
+        <div className="button-box">
+          <button className={`event-button ${selectedEvent === 'Webinar' ? 'active' : ''}`} onClick={() => handleEventClick('Webinar')}>Webinar</button>
+          <button className={`event-button ${selectedEvent === 'Virtual Event' ? 'active' : ''}`} onClick={() => handleEventClick('Virtual Event')}>Virtual Event</button>
+          <button className={`event-button ${selectedEvent === 'Hybrid Event' ? 'active' : ''}`} onClick={() => handleEventClick('Hybrid Event')}>Hybrid Event</button>
+          <button className={`event-button ${selectedEvent === 'InPerson Event' ? 'active' : ''}`} onClick={() => handleEventClick('InPerson Event')}>InPerson Event</button>
+        </div>
       </div>
-
+      
       {selectedEvent && (
         <div className="event-text">
-          <p>{eventTexts[selectedEvent]}</p>
+          <div className="event-text-content">
+            {renderEventContent()}
+          </div>
         </div>
       )}
+      <PowerfulFeatures />
+
     </div>
   );
 };

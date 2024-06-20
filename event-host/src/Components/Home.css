@@ -160,63 +160,56 @@
     font-size: 30px;
     color: white;
   }
+  .outer-button-box {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
   .button-box {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 40px;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 15px;
-    width: 50%; /* Adjust width as needed */
-  }
-  
-  /* Event text */
-  .event-text {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    max-width: 600px;
-    margin: auto; /* Center the box */
-    text-align: left; /* Ensure text inside event-text is left-aligned */
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
     position: relative; /* Enable positioning */
     border: 1px solid white;
-    width:800px;
+    border-radius: 15px;
+    padding: 15px;
   }
-  
-  .event-text-content {
-    margin-bottom: 20px; /* Add space between event text and button box */
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    gap: 10px; /* Adjust spacing between buttons */
-    position: absolute; /* Position relative to the event-text container */
-    bottom: 10px; /* Adjust the distance from the bottom */
-    left: 0;
-    right: 0; /* Center horizontally */
-    margin: auto; /* Center using margin */
-  }
-  
-  .event-button {
+.event-button {
     background-color: black;
     color: white;
-    border: none;
+    /* border: 1px solid white; */
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
-  }
+    z-index: 1;
+}
   
   .event-button.active {
-    background-color: #3CECD5;
-    color: black;
+    background-color: #43EFC6;
+    color:black;
+    font-weight: bold;
   }
   
   .event-button:hover {
-    background-color: #3CECD5; /* Change background color on hover */
-    color: black;
+    opacity: none;
   }
+
+  .event-text {
+    margin-top: -20px; /* Adjust as needed to move it slightly up */
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    width: 950px; /* Ensure it is wider than the button box */
+    margin: auto; /* Center the box */
+    text-align: left; /* Ensure text inside event-text is left-aligned */
+    position: relative;
+    /* border: 1px solid white; */
+    z-index: 1; /* Ensure it stays below the button box */
+    height: 400px;
+}

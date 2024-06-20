@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: none;
-    color: #fff;
+    color: white;
     padding: 10px 20px;
     font-size: 18px;
     height: 80px;
@@ -33,10 +33,15 @@
     font-size: 24px;
     font-weight: bold;
     margin-left: 20px;
+    color: white;
+}
+.host{
+    color: #43EFC6;
 }
 
 .title, .subtext, .platform, .price, .company, .login {
     margin-right: 10px;
+    color: #646464;
 }
 
 .dropdown-button {
@@ -54,7 +59,7 @@
 }
 
 .book-demo-button {
-    background-color: #f39c12;
+    background-color: #3CECD5;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -62,15 +67,17 @@
     font-size: 16px;
     border-radius: 5px;
     margin-left: 10px;
+    font-weight: bold;
 }
 
 .book-demo-button:hover {
-    background-color: #e67e22;
+    background-color: #3CECD5;
 }
 
 .login {
     margin-right: 10px;
     cursor: pointer;
+    color: #848484;
 }
 
 .arrow svg {

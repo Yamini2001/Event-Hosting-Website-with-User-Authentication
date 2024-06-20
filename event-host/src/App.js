@@ -6,6 +6,7 @@ import AuthProvider from "./context/AuthContext";
 import PrivateRoute from "./router/PrivateRoute";
 import Navbar from "./Components/Navbar"; // Assuming you have a Navbar component
 import "./App.css"; // Assuming you have global styles in App.css
+import Home from "./Components/Home";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <AuthProvider>
           <Navbar />
           <Routes>
+          <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route element={<PrivateRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />

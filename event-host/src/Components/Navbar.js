@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       <div className="header">
         <div className="left">
-          <div className="logo">EventHost</div>
+          <div className="logo">Event<span className="host">Host</span></div>
         </div>
         <div className="middle">
           <div className="title">Solution</div>

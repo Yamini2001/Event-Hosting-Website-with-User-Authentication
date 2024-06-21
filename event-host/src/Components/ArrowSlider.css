@@ -1,0 +1,35 @@
+.arrow-slider-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .custom-prev-arrow {
+    left: 10px;
+  }
+  
+  .custom-next-arrow {
+    right: 10px;
+  }
+  
+  .custom-prev-arrow svg,
+  .custom-next-arrow svg {
+    fill: #fff;
+  }
+  

@@ -1,0 +1,19 @@
+.client-speak-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+  }
+  
+  .client-speak-container h2 {
+    color: white;
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+  
+  .client-speak-container p {
+    color: #fff;
+    font-size: 1.0rem;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  

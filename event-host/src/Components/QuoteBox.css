@@ -1,0 +1,119 @@
+/* Container for the entire quote box */
+.quote-box {
+  background-color: rgb(70, 65, 65);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto;
+  height:230px;
+  /* border: 1px solid black; */
+  
+}
+
+/* Container for the quote content */
+.quote-content {
+  display: flex;
+  align-items: center;
+  /* color:black; */
+}
+
+/* Container for the person image */
+.image-container4 {
+  width: 210px; /* Adjust size as needed */
+  height: 190px; /* Adjust size as needed */
+  overflow: hidden;
+  border-radius: 10%; /* Ensure the container is a circle */
+  margin-right: 20px; /* Adjust spacing between image and text */
+  margin-top: 10px;
+}
+
+.image-container4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container for the quote text and logo */
+.quote-text {
+  margin-left: 30px; /* Adjust spacing between image and text */
+  flex-grow: 1; /* Allow text to grow within available space */
+  font-size: 15px;
+}
+
+/* Inner container for text and logo */
+.quote-text-inner {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Logo image */
+.quote-logo {
+  width: 100px; /* Adjust size as needed */
+  margin-right: 20px; /* Adjust spacing between logo and text */
+}
+
+/* Styling for the quote text */
+.quote-text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 10px;
+  
+}
+
+/* Styling for the person name */
+.quote-text .name {
+  margin-top: auto; /* Aligns person name to the bottom */
+  font-weight: bold;
+  margin-left: 140px;
+  color: white;
+}
+
+/* Styling for the CEO info */
+.quote-text p:last-child {
+  margin-top: 5px;
+  font-style: italic;
+  color: #999999;
+}
+
+/* Container for the arrows */
+.arrows {
+  position: relative;
+  top: 30%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 50px; /* Adjust the width of the arrow container */
+  text-align: center;
+  gap:20px;
+  margin-left: 260px;
+  /* color:black; */
+}
+
+/* Styling for arrows */
+.arrow {
+  width: 40px; /* Adjust size of the arrow container */
+  height: 40px; /* Adjust size of the arrow container */
+  cursor: pointer;
+  background-color: grey;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%; /* Circular shape */
+  /* color:black; */
+}
+
+.arrow:hover {
+  background-color: black;
+}
+
+.arrow svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}

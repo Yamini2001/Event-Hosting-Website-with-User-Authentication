@@ -1,16 +1,65 @@
 .powerful-features-container {
-    margin-top: 150px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    max-width: 700px;
-    margin: auto; /* Center the box */
-    text-align: left; /* Ensure text inside event-text is left-aligned */
-    position: relative; /* Enable positioning */
-    border: 1px solid white;
-    border-radius: 15px;
+    background-color: #000; /* Background color of the container */
+    color: #fff; /* Text color */
+    border-radius: 10px;
+    text-align: center; /* Center align the text */
+    max-width: 1200px;
   }
-  .powerful-features-container h2{
-    color:white;
+  
+  .powerful-features-container h2 {
+    margin-top: 120px;
   }
+  
+  .features-images {
+    display: flex;
+    flex-wrap: wrap; /* Allow the images to wrap to the next line if needed */
+    justify-content: center;
+    gap: 40px; /* Space between images */
+    margin-top: 100px;
+  }
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px; /* Adjust the max-width as necessary */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.4s ease; /* Smooth transition for border, transform, box-shadow, and margin */
+  }
+  
+  .feature img {
+    width: 100%; /* Make the images responsive */
+    height: 350px;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Space between the image and its name */
+    border: 2px solid transparent; /* Default border color */
+    transition: all 0.4s ease; /* Smooth transition for border, transform, and box-shadow */
+    border: 2px solid white;
+  }
+  
+  .feature-name {
+    color: white; /* Set the text color to white */
+    font-size: 10px;
+    text-align: center;
+    margin-top: -80px;
+    text-wrap: nowrap;
+    /* gap:10px; */
+  }
+  
+  .feature.highlighted img {
+    border-color: #43EFC6; /* Change border color to green when highlighted */
+    border-width: 4px; /* Increase border width */
+    transform: scale(1.1); /* Enlarge the image */
+    box-shadow: 0 4px 20px rgba(67, 239, 198, 0.5); /* Add a green shadow for more emphasis */
+  }
+  
+  .feature.highlighted + .feature {
+    margin-left: -50px; /* Move the next feature closer */
+  }
+  
+  .feature.highlighted ~ .feature {
+    margin-right: -30px; /* Move the previous feature closer */
+  }
+  

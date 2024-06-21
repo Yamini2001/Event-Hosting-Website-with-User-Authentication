@@ -13,6 +13,8 @@ import VirtualEvent from "./VirtualEvent";
 import HybridEvent from "./HybridEvent";
 import InPersonEvent from "./InPersonEvent";
 import PowerfulFeatures from "./PowerfulFeatures"; 
+import ClientSpeak from './ClientSpeak';
+import QuoteBox from './QuoteBox';
 
 const Home = () => {
   const [selectedEvent, setSelectedEvent] = useState('Virtual Event'); // Default to 'Virtual Event'
@@ -49,9 +51,9 @@ const Home = () => {
       </p>
       <div className="buttons">
         <button className="book-demo-button">Book Demo</button>
-        <button className="explore-event-pro-button">Explore Event Pro</button>
+        <button className="explore-event-pro-button">Explore Event Host</button>
       </div>
-      <div className="image-container">
+      <div className="image-container1">
         <img src={image1} alt="Image 1" className="image1" />
         <img src={image2} alt="Image 2" className="image2" />
         <img src={image3} alt="Image 3" className="image3" />
@@ -108,7 +110,9 @@ const Home = () => {
           </div>
         </div>
       )}
-      <PowerfulFeatures />
+      <PowerfulFeatures/>
+      <ClientSpeak/>
+      <QuoteBox/>
 
     </div>
   );

@@ -15,7 +15,9 @@ const Navbar = () => {
     <>
       <div className="header">
         <div className="left">
-          <div className="logo">Event<span className="host">Host</span></div>
+          <Link to="/" className="logo">
+            Event<span className="host">Host</span>
+          </Link>
         </div>
         <div className="middle">
           <div className="title">Solution</div>

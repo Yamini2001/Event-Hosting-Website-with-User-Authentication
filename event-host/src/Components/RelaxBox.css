@@ -1,0 +1,71 @@
+/* Container for the entire component */
+.relax-box {
+    background-color: #061815; /* Green background */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white; /* White text color for better readability */
+    margin: 100px; /* Adjust margin as needed */
+    width:920px;
+    margin-left: -215px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the content */
+  .relax-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .relax-heading {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .relax-description {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .book-demo-button {
+    background-color: #43EFC6;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .book-demo-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Container for the icon and image */
+  .icon-container {
+    margin: 20px 0;
+    margin-left: 360px;
+    margin-top: -80px;
+  }
+  
+  .roundabout-icon {
+    font-size: 150px;
+    color: #43EFC6;
+  }
+  
+  .image-container3 {
+    margin-left: 350px;
+  }
+  
+  .image-container3 img {
+    width: 500px; /* Adjust size as needed */
+    height: 250px;
+    border-radius: 20px;
+    margin-top: -30px;
+
+  }
+  

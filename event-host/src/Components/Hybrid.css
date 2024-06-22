@@ -13,16 +13,16 @@
     margin-top: -20px;
   }
   
-  .event-text {
+  .event-text2 {
     flex: 1; /* Take remaining space */
   }
   
-  .event-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  .event-text2 h2 {
+    font-size: 2.0rem;
+    margin-top: -90px;
   }
   
-  .event-text p {
+  .event-text2 p {
     font-size: 1.2rem;
     line-height: 1.6;
   }

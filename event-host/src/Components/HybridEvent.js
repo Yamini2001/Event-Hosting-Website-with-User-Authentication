@@ -5,7 +5,7 @@ import './Hybrid.css'; // Import the CSS file
 
 const Hybrid = () => (
   <div className="hybrid-container">
-    <div className="event-text">
+    <div className="event-text2">
       <h2>Combining the best of both worlds.</h2>
       <p>Hybrid events offer a seamless blend of in-person and virtual experiences. They cater to a diverse audience, allowing participants to join either physically or virtually, ensuring maximum engagement and interaction.</p>
 

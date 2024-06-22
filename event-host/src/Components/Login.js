@@ -1,67 +1,56 @@
-import React, { useState } from "react";
-import { useAuth } from "../context/AuthContext";
-import "./Login.css";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
-const Login = () => {
-  const [input, setInput] = useState({
-    email: "",
-    password: "",
-  });
+function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const [error, setError] = useState("");
-  const auth = useAuth();
-
-  const handleSubmitEvent = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (input.email !== "" && input.password !== "") {
-      try {
-        await auth.loginAction(input);
-      } catch (err) {
-        setError(err.message);
+    try {
+      const response = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem('token', data.token);
+        navigate('/dashboard');
+      } else {
+        console.error('Login failed');
       }
-    } else {
-      setError("Please provide a valid input");
+    } catch (error) {
+      console.error('Error:', error);
     }
   };
 
-  const handleInput = (e) => {
-    const { name, value } = e.target;
-    setInput((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   return (
-    <div className="login-container">
-      <div className="login-box">
+    <form onSubmit={handleSubmit}>
+      <div>
         <h2>Login</h2>
-        {error && <div className="error">{error}</div>}
-        <form onSubmit={handleSubmitEvent}>
-          <div className="form-control">
-            <label htmlFor="user-email">Email:</label>
-            <input
-              type="email"
-              id="user-email"
-              name="email"
-              placeholder="example@yahoo.com"
-              onChange={handleInput}
-            />
-          </div>
-          <div className="form-control">
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              onChange={handleInput}
-            />
-          </div>
-          <button className="btn-submit">Submit</button>
-        </form>
+        <label>Email:</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </div>
-    </div>
+      <div>
+        <label>Password:</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <button3 type="submit">Login</button3>
+    </form>
   );
-};
+}
 
 export default Login;

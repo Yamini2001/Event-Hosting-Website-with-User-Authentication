@@ -9,6 +9,7 @@
   margin: 0 auto;
   height:230px;
   /* border: 1px solid black; */
+  margin-top: -20px;
   
 }
 
@@ -79,7 +80,7 @@
 }
 
 /* Container for the arrows */
-.arrows {
+.arrows1 {
   position: relative;
   top: 30%;
   transform: translateY(-50%);
@@ -106,6 +107,7 @@
   justify-content: center;
   border-radius: 100%; /* Circular shape */
   /* color:black; */
+  margin-top: -25px;
 }
 
 .arrow:hover {

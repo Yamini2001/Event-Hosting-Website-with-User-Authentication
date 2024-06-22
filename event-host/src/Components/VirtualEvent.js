@@ -5,8 +5,8 @@ import './VirtualEvent.css'; // Import the CSS file
 
 const VirtualEvent = () => (
   <div className="virtual-event-container">
-    <div className="event-text">
-      <h3 className="text">Ensuring a seamless and captivating <br/> experience for all attendees.</h3>
+    <div className="event-text1">
+      <h3 className="text">Ensuring a seamless and captivating experience for all attendees.</h3>
       <p>In our virtual events, we seamlessly blend gorgeous <br/> design  with an elegant flow, creating immersive and <br/> engaging  experiences for participants from the comfort <br/>of their own homes</p>
 
       <p className="learn-more">

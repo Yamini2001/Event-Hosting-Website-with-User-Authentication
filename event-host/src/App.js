@@ -1,30 +1,32 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./Components/Login";
-import Dashboard from "./Components/Dashboard";
-import AuthProvider from "./context/AuthContext";
-import PrivateRoute from "./router/PrivateRoute";
-import Navbar from "./Components/Navbar"; // Assuming you have a Navbar component
-import "./App.css"; // Assuming you have global styles in App.css
-import Home from "./Components/Home";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import Login from './Components/Login';
+import Dashboard from './Components/Dashboard';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import './App.css';
 
 function App() {
+  const isAuthenticated = () => {
+    return !!localStorage.getItem('token');
+  };
+
   return (
-    <div className="App">
+    <AuthProvider>
       <Router>
-        <AuthProvider>
-          <Navbar />
-          <Routes>
+        <Navbar />
+        <Routes>
           <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route element={<PrivateRoute />}>
-              <Route path="/dashboard" element={<Dashboard />} />
-            </Route>
-            {/* Other routes */}
-          </Routes>
-        </AuthProvider>
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/dashboard"
+            element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />}
+          />
+          <Route path="*" element={<Navigate to="/login" />} />
+        </Routes>
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 

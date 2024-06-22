@@ -11,6 +11,7 @@
     width:920px;
     margin-left: -215px;
     margin-bottom: 10px;
+    /* height:600px; */
   }
   
   /* Styling for the content */
@@ -22,7 +23,7 @@
   
   .relax-heading {
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   
   .relax-description {
@@ -30,7 +31,7 @@
     margin-bottom: 20px;
   }
   
-  .book-demo-button {
+  .book-demo-button3 {
     background-color: #43EFC6;
     color: black;
     border: none;
@@ -41,7 +42,7 @@
     font-weight: bold;
   }
   
-  .book-demo-button:hover {
+  .book-demo-button3:hover {
     background-color: #f0f0f0;
   }
   

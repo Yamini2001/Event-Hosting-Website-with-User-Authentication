@@ -5,7 +5,7 @@ import './InPersonEvent.css'; // Import the CSS file
 
 const InPersonEvent = () => (
   <div className="in-person-container">
-    <div className="event-text">
+    <div className="event-text5">
       <h2>Connecting in real life, face-to-face.</h2>
       <p>In-person events offer unparalleled opportunities for networking, collaboration, and engagement. They bring together like-minded individuals in a physical setting, fostering meaningful connections and memorable experiences.</p>
 

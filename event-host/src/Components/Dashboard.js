@@ -1,15 +1,18 @@
-import React from "react";
-import { useAuth } from "../context/AuthContext";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
-  const auth = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
 
   return (
-    <div className="container">
-      <h1>Welcome, {auth.user?.username}!</h1>
-      <button onClick={auth.logOut} className="btn-submit">
-        Logout
-      </button>
+    <div>
+      <h2>Dashboard</h2>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 };

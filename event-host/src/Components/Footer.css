@@ -7,7 +7,7 @@
   width:1465px;
   margin-top: 60px;
   margin-left: -450px;
-  height:450px;
+  height:550px;
 }
 
 /* Horizontal line in the footer */
@@ -38,6 +38,7 @@
   flex: 1;
   min-width: 200px;
   /* margin-left: -10px; */
+  
 }
 .follow{
   margin-right: 140px;

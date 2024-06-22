@@ -13,16 +13,18 @@
     margin-top: -20px;
   }
   
-  .event-text {
+  .event-text5 {
     flex: 1; /* Take remaining space */
+    margin-top: -70px;
+
   }
   
-  .event-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  .event-text5 h2 {
+    font-size: 2.0rem;
+    margin-bottom: 30px;
   }
   
-  .event-text p {
+  .event-text5 p {
     font-size: 1.2rem;
     line-height: 1.6;
   }

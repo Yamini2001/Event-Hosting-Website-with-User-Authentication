@@ -6,13 +6,15 @@
     color: white;
     padding: 10px 20px;
     font-size: 18px;
-    height: 80px;
+    height: 100px;
+    margin-bottom: -20px;
 }
 
 .left {
     flex: 1;
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 .middle {
@@ -20,6 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
 }
 
 .right {
@@ -44,7 +47,7 @@
     color: #646464;
 }
 
-.dropdown-button {
+.dropdown-button1 {
     background: none;
     border: none;
     color: inherit;
@@ -52,32 +55,36 @@
     display: flex;
     align-items: center;
     margin-right: 10px;
+    margin-bottom: 50px;
 }
 
-.dropdown-button:focus {
+.dropdown-button1:focus {
     outline: none;
 }
 
-.book-demo-button {
+.book-demo-button1 {
     background-color: #3CECD5;
     border: none;
-    color: white;
+    color: black;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
     margin-left: 10px;
     font-weight: bold;
+    margin-bottom: -20px;
 }
 
-.book-demo-button:hover {
+.book-demo-button1:hover {
     background-color: #3CECD5;
+    font-weight: bold;
 }
 
 .login {
     margin-right: 10px;
     cursor: pointer;
     color: #848484;
+    margin-bottom: -20px;
 }
 
 .arrow svg {

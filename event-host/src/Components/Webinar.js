@@ -5,7 +5,7 @@ import './Webinar.css'; // Import the CSS file if needed
 
 const Webinar = () => (
   <div className="webinar-container">
-    <div className="event-text">
+    <div className="event-text3">
       <h3 className="text">The more that you read, the more things you will know.</h3>
       <p>Webinars are online events that allow you to share presentations, videos, web pages, or other multimedia content with audiences all over the world. They can be live or recorded, making them an excellent tool for sharing information and interacting with your audience.</p>
       <p className="learn-more">

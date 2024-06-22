@@ -21,23 +21,23 @@ const Navbar = () => {
         </div>
         <div className="middle">
           <div className="title">Solution</div>
-          <button className="dropdown-button" onClick={handleDropdownClick}>
+          <button className="dropdown-button1" onClick={handleDropdownClick}>
             <FaCaretDown />
           </button>
           <div className="subtext">Resources</div>
-          <button className="dropdown-button" onClick={handleDropdownClick}>
+          <button className="dropdown-button1" onClick={handleDropdownClick}>
             <FaCaretDown />
           </button>
           <div className="platform">Platform</div>
-          <button className="dropdown-button" onClick={handleDropdownClick}>
+          <button className="dropdown-button1" onClick={handleDropdownClick}>
             <FaCaretDown />
           </button>
           <div className="price">Pricing</div>
-          <button className="dropdown-button" onClick={handleDropdownClick}>
+          <button className="dropdown-button1" onClick={handleDropdownClick}>
             <FaCaretDown />
           </button>
           <div className="company">Company</div>
-          <button className="dropdown-button" onClick={handleDropdownClick}>
+          <button className="dropdown-button1" onClick={handleDropdownClick}>
             <FaCaretDown />
           </button>
         </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
               Login
             </Link>
           )}
-          <button className="book-demo-button">Book Demo</button>
+          <button className="book-demo-button1">Book Demo</button>
         </div>
       </div>
       <hr className="navbar-divider" />

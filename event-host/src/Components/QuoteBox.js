@@ -62,7 +62,7 @@ const QuoteBox = () => {
           <p>{quotes[currentQuoteIndex].title}</p>
         </div>
       </div>
-      <div className="arrows">
+      <div className="arrows1">
         <div className="arrow left" onClick={previousQuote}>
           <FaArrowLeft className="arrow-icon" />
         </div>

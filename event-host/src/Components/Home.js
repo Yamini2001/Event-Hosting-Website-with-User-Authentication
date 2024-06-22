@@ -104,7 +104,7 @@ const Home = () => {
       </div>
       
       {selectedEvent && (
-        <div className="event-text">
+        <div className="event-text6">
           <div className="event-text-content">
             {renderEventContent()}
           </div>

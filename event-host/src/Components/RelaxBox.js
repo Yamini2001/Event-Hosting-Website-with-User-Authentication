@@ -13,7 +13,7 @@ const RelaxBox = () => {
         <p className="relax-description">
           We simplify the process for you.
         </p>
-        <button className="book-demo-button">
+        <button className="book-demo-button3">
           Book a Free Demo
         </button>
         <div className="icon-container">

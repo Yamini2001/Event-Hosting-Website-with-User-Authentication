@@ -89,7 +89,7 @@
   }
 
   .image1 {
-    width: 400px; /* Adjust width as needed */
+    width: 390px; /* Adjust width as needed */
     top: 0;
     left: -100px;
     border-radius: 10px;
@@ -124,7 +124,7 @@
   }
   
   .image4 {
-    width: 400px; /* Adjust width as needed */
+    width: 390px; /* Adjust width as needed */
     top: -400px;
     left: 560px;
     border-radius: 10px;
@@ -148,7 +148,7 @@
     align-items: center; /* Center items vertically */
     margin-right: 20px;
     color: white; /* Set text color to white */
-    margin-top: 190px;
+    margin-top: 140px;
   }
   .logo-item:last-child {
     margin-right: 10px; /* Remove margin for the last logo */
@@ -156,16 +156,16 @@
   
   .logo-item .text {
     margin-left: 10px; /* Add some space between the logo and text */
-    margin-top: 1px;
+    margin-top: 20px;
   }
   .use-case-heading{
     text-align: center;
-    margin-top: 130px;
+    margin-top: 140px;
     text-wrap: nowrap;
     margin-left: -90px;
     font-size: 30px;
     color: white;
-    margin-top: -20px;
+    margin-top: 90px;
   }
   .outer-button-box {
     /* margin-top: 5px; */
@@ -222,5 +222,5 @@
     /* border: 1px solid white; */
     z-index: 1; /* Ensure it stays below the button box */
     height: 400px;
-    margin-top: -90px;
+    margin-top: -1px;
 }

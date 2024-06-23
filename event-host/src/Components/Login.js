@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import './Login.css'; // Import the CSS file
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -38,10 +39,10 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
+        <div className="login-container">
             <form onSubmit={handleLogin}>
-                <div>
+                <h2>Login</h2>
+                <div className="input-group">
                     <label>Email:</label>
                     <input
                         type="email"
@@ -50,7 +51,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                <div>
+                <div className="input-group">
                     <label>Password:</label>
                     <input
                         type="password"
@@ -61,7 +62,7 @@ const Login = () => {
                 </div>
                 <button type="submit">Login</button>
             </form>
-            {error && <div style={{ color: 'red' }}>{error}</div>}
+            {error && <div className="error-message">{error}</div>}
         </div>
     );
 };

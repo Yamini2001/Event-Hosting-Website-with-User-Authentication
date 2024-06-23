@@ -1,25 +1,16 @@
-/* Add global styles here */
+/* App.css */
 
-body, html, #root {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  padding: 20px;
-}
-
-.btn-submit {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.btn-submit:hover {
+/* Set the background color of the entire app to black */
+body {
   background-color: black;
+  color: white; /* Set the default text color to white for better contrast */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Set a default font family */
 }
+
+/* Ensure that all container divs stretch to fill the screen */
+#root, .App {
+  height: 100%;
+}
+
+/* Add additional styles if needed */

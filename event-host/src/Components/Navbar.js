@@ -5,11 +5,12 @@ import { useAuth } from '../context/AuthContext';
 import './Navbar.css';
 
 const Navbar = () => {
-    const { user, logout } = useAuth();
+    const { user, logout } = useAuth(); 
 
     const handleDropdownClick = () => {
         console.log('Dropdown icon clicked');
     };
+
 
     return (
         <>

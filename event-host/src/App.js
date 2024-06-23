@@ -1,8 +1,6 @@
-// App.js (or index.js)
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext'; // Adjust path as necessary
-// import PrivateRoute from './Components/PrivateRoute'; 
 import Login from './Components/Login'; // Adjust path as necessary
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
@@ -12,6 +10,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/login" element={<Login />} />
           {/* <PrivateRoute path="/dashboard" element={<Dashboard />} /> */}

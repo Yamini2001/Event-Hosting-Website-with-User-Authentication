@@ -15,6 +15,7 @@ import InPersonEvent from "./InPersonEvent";
 import PowerfulFeatures from "./PowerfulFeatures"; 
 import ClientSpeak from './ClientSpeak';
 import QuoteBox from './QuoteBox';
+import Navbar from "./Navbar";
 
 const Home = () => {
   const [selectedEvent, setSelectedEvent] = useState('Virtual Event'); // Default to 'Virtual Event'
@@ -40,6 +41,8 @@ const Home = () => {
   };
 
   return (
+    <>
+  <Navbar/>
     <div className="home-container">
       <h1>
         Redesigned Events For <br/>
@@ -115,6 +118,7 @@ const Home = () => {
       <QuoteBox/>
 
     </div>
+    </>
   );
 };
 

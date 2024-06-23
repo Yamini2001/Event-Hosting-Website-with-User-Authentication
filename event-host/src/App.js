@@ -1,29 +1,23 @@
+// App.js (or index.js)
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
-import Login from './Components/Login';
-import Dashboard from './Components/Dashboard';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext'; // Adjust path as necessary
+// import PrivateRoute from './Components/PrivateRoute'; 
+import Login from './Components/Login'; // Adjust path as necessary
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
-import './App.css';
+// import Dashboard from './Components/Dashboard'; // Adjust path as necessary
 
 function App() {
-  const isAuthenticated = () => {
-    return !!localStorage.getItem('token');
-  };
-
   return (
     <AuthProvider>
       <Router>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route
-            path="/dashboard"
-            element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />}
-          />
-          <Route path="*" element={<Navigate to="/login" />} />
+          {/* <PrivateRoute path="/dashboard" element={<Dashboard />} /> */}
+          <Route path="/navbar" element={<Navbar />} />
+          <Route path="/home" element={<Home />} />
+          {/* Other routes */}
         </Routes>
       </Router>
     </AuthProvider>

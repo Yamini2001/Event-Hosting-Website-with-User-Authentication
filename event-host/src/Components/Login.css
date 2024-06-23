@@ -1,5 +1,6 @@
 /* Login.css */
-form {
+
+.login-container {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
@@ -8,7 +9,7 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   width:40%;
-  height:45%;
+  height:55%;
   margin-bottom: 10px;
 }
 
@@ -17,10 +18,12 @@ div {
   
 }
 
+
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  margin-top: 50px;
 }
 
 input[type="email"],
@@ -30,19 +33,24 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+  margin-top: 10px;
+
 }
 
-button3 {
-  width: 100%;
+button2 {
+  width: 600px;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #4CAF50;
+  background-color: #43EFC6;
   color: white;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 50px;
+  font-weight: bold;
 }
 
-button3:hover {
-  background-color: #45a049;
+button2:hover {
+  background-color: rgb(118, 118, 177);
+  color:black;
 }

@@ -30,7 +30,7 @@ Mysql: Mysql database for storing event and user data.
 
 ## ScreenShots:
 ## Login Page:
-![Login](https://drive.google.com/file/d/1Uld972W1FE8Ji2fHISGo11xvVaIGNZ1P/view?usp=sharing)
+
 
 ## Getting Started
 To get a local copy of the project up and running, follow these steps:

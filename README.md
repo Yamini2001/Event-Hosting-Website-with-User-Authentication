@@ -28,12 +28,17 @@ Node.js: Server-side JavaScript runtime.
 Express.js: Minimal and flexible Node.js web application framework.
 Mysql: Mysql database for storing event and user data.
 
+## ScreenShots:
+## Login Page:
+![Alt Text](https://drive.google.com/file/d/1Uld972W1FE8Ji2fHISGo11xvVaIGNZ1P/view?usp=sharing)
+
 ## Getting Started
 To get a local copy of the project up and running, follow these steps:
 
 ## Clone the repository:
 
 git clone https://github.com/your-username/event-hosting-website.git
+
 cd event-hosting-website
 
 ## Install dependencies:
@@ -44,6 +49,7 @@ npm install
 
 Create a .env file in the root directory.
 Define environment variables such as database URI, JWT secret, etc.
+
 ## Run the development server:
 
 npm start

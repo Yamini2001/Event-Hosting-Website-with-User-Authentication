@@ -30,7 +30,7 @@ Mysql: Mysql database for storing event and user data.
 
 ## ScreenShots:
 ## Login Page:
-
+![Login Page](https://github.com/Yamini2001/Event-Hosting-Website-with-User-Authentication/assets/60056299/746c345b-0be0-4a70-863a-fe57a15d5805)
 
 ## Getting Started
 To get a local copy of the project up and running, follow these steps:
